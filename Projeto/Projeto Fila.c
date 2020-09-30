@@ -1,8 +1,8 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h> //para usar stricmp -  para compara STRINGS com letras maiusculas e minusculas
-#include<ctype.h> // para usar toupper - para comparar CARACTERES maisculos e minusculos
-#include<locale.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h> //para usar stricmp -  para compara STRINGS com letras maiusculas e minusculas
+#include <ctype.h> // para usar toupper - para comparar CARACTERES maisculos e minusculos
+#include <locale.h>
 #include <time.h>
 #include "tela.h"
 
@@ -41,8 +41,6 @@ void imprimir_fila (int i, fila*inicio);
 void analise_result (no_tempos**inicio_tempos,int tempo_simul, int tam_filas[][num_serv],int total_clientes);
 
 void simulacao(no_tempos**inicio_t, int aceleracao_simul);
-
-
 
 int main ()
 {
@@ -108,7 +106,6 @@ int main ()
     return 0;
 
 }
-
 
 void simulacao(no_tempos**inicio_t, int aceleracao_simul)
 {
@@ -323,8 +320,6 @@ void simulacao(no_tempos**inicio_t, int aceleracao_simul)
     clrscr();
 
     analise_result(inicio_t, tempo_simul, tam_filas, total_clientes);
-
-
 }
 
 int tamanho_fila(int i, fila *inicio)
@@ -354,7 +349,6 @@ int tamanho_fila(int i, fila *inicio)
 
 
     return (count_tamanho_fila);
-
 }
 
 
@@ -426,7 +420,6 @@ void remover(int maior_fila, fila**inicio, no_tempos**inicio_t, int count_tempo)
     fila *aux = (*inicio);
     (*inicio)=(*inicio)->prox;
     free(aux);
-
 }
 
 
@@ -461,7 +454,6 @@ void imprimir_fila (int i, fila*inicio)
 
     printf("\n\t----------------------------------------------------------");
 }
-
 
 void analise_result (no_tempos**inicio_tempos,int tempo_simul, int tam_filas[][num_serv], int total_clientes)
 {
@@ -615,15 +607,4 @@ void analise_result (no_tempos**inicio_tempos,int tempo_simul, int tam_filas[][n
     printf("\n\n\n\t");
     system("pause");
     clrscr();
-
 }
-
-
-
-
-
-
-
-
-
-
